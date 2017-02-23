@@ -8,6 +8,17 @@ let g:vim_markdown_folding_disabled = 1
 " Set the <Leader> key (works as a namespace for custom commands)
 :let mapleader = ","
 
+" Syntastics rubocop
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ruby_checkers=['mri', 'rubocop']
+
 " Turn on syntax highlighting
 syntax on
 
@@ -30,6 +41,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
+
+" fix vim display bug
+set t_ut=  
 
 " Allow to open up to 20 tabs
 set tabpagemax=20
