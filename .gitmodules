@@ -25,3 +25,6 @@
 [submodule "bundle/vim-octave"]
 	path = bundle/vim-octave
 	url = https://github.com/jvirtanen/vim-octave
+[submodule "bundle/vim-vue"]
+	path = bundle/vim-vue
+	url = http://github.com/posva/vim-vue.git
