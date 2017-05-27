@@ -20,6 +20,10 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_checkers=['mri', 'rubocop']
 let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of .* in void context'}
 
+" Set foldmethod to indent and set folds open by default
+set foldmethod=indent
+set foldlevel=20
+
 " Turn on syntax highlighting
 syntax on
 
