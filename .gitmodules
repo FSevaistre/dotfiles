@@ -34,3 +34,6 @@
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "vim-prettier"]
+	path = vim-prettier
+	url = https://github.com/prettier/vim-prettier
