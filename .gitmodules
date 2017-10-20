@@ -28,3 +28,6 @@
 [submodule "bundle/vim-vue"]
 	path = bundle/vim-vue
 	url = http://github.com/posva/vim-vue.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby
