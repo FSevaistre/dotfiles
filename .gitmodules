@@ -37,3 +37,6 @@
 [submodule "vim-prettier"]
 	path = vim-prettier
 	url = https://github.com/prettier/vim-prettier
+[submodule "bundle/cilquirm"]
+	path = bundle/cilquirm
+	url = https://github.com/cilquirm/javacomplete

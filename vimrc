@@ -87,6 +87,8 @@ nmap <Leader>hv <Plug>GitGutterPreviewHunk
 " Font for gvim
 set guifont=DejaVu\ Sans\ Mono\ 11
 
+set rtp+=~/.fzf
+
 " :Split ls -la
 " :Tab ls -la
 " :! ls -la
@@ -180,6 +182,30 @@ function! NextIndent(exclusive, fwd, lowerlevel, skipblanks)
     endif
   endwhile
 endfunction
+
+" augroup cls
+"   au!
+"   autocmd BufNewFile,BufRead *.cls   set syntax=java
+" augroup END
+"}}}
+" Java options {{{
+function SetJavaOpts()
+    setfiletype java
+    "match these characters with %
+    setlocal matchpairs=(:),{:},[:],<:>
+
+    "eclipse style add a * comments
+    setlocal comments-=s1:/*,mb:*,ex:*/
+    setlocal comments+=fb:*
+
+    "completion options
+    setlocal cscopequickfix=s-,c-,d-,i-,t-,e-
+    setlocal completeopt=longest,menuone
+    setlocal completefunc=javacomplete#Complete
+    "export java classpath as completion locations for javacomplete
+    for i in split($CLASSPATH,":")|call javacomplete#AddClassPath(i)|endfor
+endfunction
+autocmd BufNewFile,Bufread *.cls call SetJavaOpts()
 
 " Moving back and forth between lines of same or lower indentation.
 nnoremap <silent> [l :call NextIndent(0, 0, 0, 1)<CR>
