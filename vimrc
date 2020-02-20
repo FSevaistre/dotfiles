@@ -26,6 +26,7 @@ set foldlevel=20
 
 " Turn on syntax highlighting
 syntax on
+autocmd BufNewFile,BufRead *.cmp set syntax=html
 
 " Display line numbers
 set nu
@@ -150,7 +151,7 @@ vnoremap // y/<C-R>"<CR>
 :map <F8> "+y
 :map <F9> "+p
 
-" Prettier on f
+" Prettier on F10
 :map <F10> :Prettier<CR>
 
 " Jump to the next or previous line that has the same level or a lower
