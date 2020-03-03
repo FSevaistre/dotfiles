@@ -19,6 +19,13 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_checkers=['mri', 'rubocop']
 let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of .* in void context'}
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
+
+let g:tsuquyomi_completion_detail = 1
+
+set ballooneval
+autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
 
 " Set foldmethod to indent and set folds open by default
 set foldmethod=indent
@@ -27,6 +34,9 @@ set foldlevel=20
 " Turn on syntax highlighting
 syntax on
 autocmd BufNewFile,BufRead *.cmp set syntax=html
+
+" Use prettier for typescript
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
 " Display line numbers
 set nu
