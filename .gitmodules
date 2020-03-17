@@ -45,7 +45,7 @@
 	url = https://github.com/neowit/vim-force.com
 [submodule "bundle/vim-prettier"]
 	path = bundle/vim-prettier
-	url = https://github.com/prettier/vim-prettier
+	url = https://github.com/prettier/vim-prettier.git
 [submodule "typescript-vim"]
 	path = typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
